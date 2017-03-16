@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Avram's Thinkful Tube</title>
+  <style>
+  * {box-sizing: border-box;}
+  body{padding:50px;}
+  .js-search-results article{float:left; text-align: center; 
+    padding:15px;
+    width:33.3%;
+    background-color: #eee;
+    margin:15px 0;
+  }
+  article strong{display: block; height: 2em;}
+  article a.channel{display: block; text-decoration: none;}
+  form section{margin-bottom: 2em;}
+  </style>
+</head>
+<body>
+  <h1>Search the YouTube Database</h1>
+  <form action="#" class="js-search-form">
+  <!-- https://developers.google.com/youtube/v3/docs/search/list -->
+    <section>
+      <label for="js-query">Search Term</label>
+      <input type="text" name="js-searchQuery">
+    </section>
+    <section>
+      <label for="js-maxResults">Max Results (1-50), default: 5</label><br>
+      <input type="text" name="js-maxResults">
+    </section>
+    <section>
+      <label for="js-order">Order By (default: relevance)</label><br>
+      <input type="radio" name="js-order" value="date">Date<br>
+      <input type="radio" name="js-order" value="rating">Rating<br>
+      <input type="radio" name="js-order" value="relevance">Relevance<br>
+      <input type="radio" name="js-order" value="title">Title A-Z<br>
+      <input type="radio" name="js-order" value="videoCount">Video Count<br>
+      <input type="radio" name="js-order" value="viewCount">View Count<br>
+    </section>
+
+    <button type="submit">Search</button>
+    <div id="js-disclaimers"></div>
+  </form>
+  
+  <div class="js-search-results">
+    
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="thinkful-tube.js"></script>
+</body>
+</html>
