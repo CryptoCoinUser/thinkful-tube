@@ -10,6 +10,7 @@ function getDataFromApi(searchTerm, callback) {
   var query = {part: 'snippet',
                key: 'AIzaSyAvbV9_8t_DS95wve7Bgp1OytF60ANVhho',
                type: 'video', 
+               relevanceLanguage: 'en',
                q: globalQuery,
                maxResults:globalMaxResults,
                order: globalOrder               
